@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { bootstrapApplication } from '@angular/platform-browser';\nimport { UserListComponent } from './app/components/user-list/user-list.component';\nbootstrapApplication(UserListComponent).catch(err => console.error(err));","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}

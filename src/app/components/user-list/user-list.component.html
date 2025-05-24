@@ -1,0 +1,22 @@
+<h1>User List</h1>
+
+<form (ngSubmit)="addUser()" #userForm="ngForm">
+  <label>
+    Name:
+    <input type="text" [ngModel]="name()" (ngModelChange)="name.set($event)" name="name" required />
+
+  </label>
+  <label>
+    Email:
+    <input type="email" [ngModel]="email()" (ngModelChange)="email.set($event)" name="email" required />
+
+  </label>
+  <button type="submit">Add User</button>
+</form>
+
+<ul>
+  <li *ngFor="let user of userList()">
+    {{ user.name }} ({{ user.email }})
+    <button (click)="deleteUser(user.id)">Delete</button>
+  </li>
+</ul>
